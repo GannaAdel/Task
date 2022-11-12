@@ -11,15 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  
+      - uses: actions/checkout@v3
 
-      - name: "Login to Docker hub"
-        run: docker login --username ${{ secrets.DOCKER_GANNA }} --password ${{ secrets.DOCKER_TOKENS }}
-      - name: "Building docker image"
-        run: docker build -t ${{ secrets.DOCKER_GANNA }}/myimage .
-      
-      - name: "Pushing to docker hub"
-        run: docker push ${{ secrets.DOCKER_GANNA }}/myimage 
-
-
-     
+      - names: "Login to docker hub"
+        run: docker login --username gannaadel --password dckr_pat_vUCFHZ3jRXTwQZKT7qP4Gk34KtM
